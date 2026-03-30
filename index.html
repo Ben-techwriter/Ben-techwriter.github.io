@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Writing Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
-    nav { background: #ffffff; padding: 15px 20px; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; }
-    nav a { margin-right: 20px; text-decoration: none; color: #444; font-size: 16px; }
-    nav a:hover { color: #000; }
-    .container { max-width: 900px; margin: 60px auto; padding: 20px; }
-    h1 { font-size: 32px; font-weight: 600; }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/script.js"></script>
 </head>
 
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="samples.html">Writing Samples</a>
-    <a href="docs.html">Documentation</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo">Your Logo</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="samples.html">Samples</a>
+      <a href="docs.html">Docs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
   </nav>
 
   <div class="container">
-    <h1>Welcome</h1>
-    <p>This is my portfolio showcasing my work as a technical writer. Explore my writing samples, documentation projects, and professional background.</p>
+    <h1>Welcome to My Portfolio</h1>
+    <p>I’m a technical writer specializing in software documentation, API guides, and developer education.</p>
+
+    <div class="card">
+      <h2>Download My Résumé</h2>
+      <p>Click the link below to download:</p>
+      <a href="assets/resume.pdf" download>📄 Download PDF</a>
+    </div>
   </div>
+
+  <footer>© 2026 Your Name</footer>
 </body>
 </html>
