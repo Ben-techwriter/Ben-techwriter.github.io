@@ -22,15 +22,91 @@
   <div class="container">
     <h1>Writing Samples</h1>
 
-    <div class="card">
-      <h2>Sample Article 1</h2>
-      <p>A blog explaining X concept...</p>
-    </div>
+    <!-- ===== Collapsible Sections for Portfolio ===== -->
 
-    <div class="card">
-      <h2>Tutorial: How to Use Y</h2>
-      <p>A step-by-step technical guide...</p>
-    </div>
+<style>
+  .collapsible {
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .collapsible:hover {
+    background-color: #e0e0e0;
+  }
+
+  .collapsible:after {
+    content: '\002B'; /* plus symbol */
+    font-weight: bold;
+    float: right;
+  }
+
+  .collapsible.active:after {
+    content: "\2212"; /* minus symbol */
+  }
+
+  .collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #fafafa;
+    border-left: 3px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 0 0 6px 6px;
+  }
+</style>
+
+<h2>Additional Documentation</h2>
+
+<!-- API Documentation -->
+<button class="collapsible">API Documentation</button>
+<div class="collapsible-content">
+  <p>Include API-related docs, endpoints, examples, Postman links, and Swagger files here.</p>
+</div>
+
+<!-- User Guide -->
+<button class="collapsible">User Guide</button>
+<div class="collapsible-content">
+  <p>Place user guide content, onboarding steps, workflows, and screenshots here.</p>
+</div>
+
+<!-- Markdown Samples -->
+<button class="collapsible">Markdown Samples</button>
+<div class="collapsible-content">
+  <p>Add Markdown examples or downloadable .md sample files here.</p>
+</div>
+
+<!-- DITA Samples -->
+<button class="collapsible">DITA Samples</button>
+<div class="collapsible-content">
+  <p>Provide DITA maps, topics, and structured XML examples here.</p>
+</div>
+
+<script>
+  const collapsibles = document.querySelectorAll(".collapsible");
+
+  collapsibles.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+</script>
 
   </div>
 </body>
